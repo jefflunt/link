@@ -1,1 +1,1 @@
-free, open source URL shortener, using on Rails 8
+free, open source URL shortener using Rails 8
