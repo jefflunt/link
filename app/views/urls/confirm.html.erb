@@ -1,11 +1,16 @@
-<h1>Congrats!</h1>
-<p>
-  <a href="<%= @url.full_dest_url %>">
-    <%= @url.full_dest_url %>
-  </a>
-</p>
-  to
-  <a href="<%= @url.dest %>">
-    <%= @url.dest %>
-  </a>
-</p>
+<div id="branding" class="col">
+  <center>
+    <h1><%= LinkConfig::BRANDING %></h1>
+
+    <p id="code-url-display">
+      <a href="<%= @url.full_code_url %>">
+        <%= @url.full_code_url %>
+      </a>
+    </p>
+      to
+      <a href="<%= @url.dest %>">
+        <%= @url.dest %>
+      </a>
+    </p>
+  </center>
+</div>

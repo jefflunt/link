@@ -1,6 +1,12 @@
-<h1>link: your free URL shortener</h1>
+<div id="branding" class="col">
+  <center>
+    <h1><%= LinkConfig::BRANDING %></h1>
 
-<%= form_with do |form| %>
-  <input name="dest" id="dest" placeholder="destination URL">
-  <%= form.submit "Create short link" %>
-<% end %>
+    <%= form_with do |form| %>
+      <input size=50 name="dest" id="dest" placeholder="destination URL">
+      <br/>
+      <br/>
+      <%= form.submit "Create short link" %>
+    <% end %>
+  </center>
+</div>

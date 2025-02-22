@@ -10,7 +10,7 @@ class Url < ApplicationRecord
 
   before_create :_generate_code
 
-  def full_dest_url
+  def full_code_url
     "#{LinkConfig::PREFIX}/#{code}"
   end
 
