@@ -14,6 +14,6 @@ class UrlsController < ApplicationController
 
   def redirect
     @url = Url.find_by(code: params[:code])
-    redirect_to(@url.dest, status: 301, allow_other_host: true) if @url
+    redirect_to(@url.dest, status: LinkConfig::REDIRECT_STATUS_CODE, allow_other_host: true) if @url
   end
 end
