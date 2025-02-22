@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/:code',                 to: "urls#redirect"
+  get '/confirm/:code',         to: "urls#confirm"
   get '/',                      to: "urls#new"
   post '/',                     to: "urls#create"
 
