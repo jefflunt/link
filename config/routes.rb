@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   get '/',                      to: "urls#new"
   post '/',                     to: "urls#create"
 
+  post '/api/create',           to: "api_urls#create"
+  get  '/api/expand/:code',     to: "api_urls#expand"
+
   get "up" => "rails/health#show", as: :rails_health_check
 end
