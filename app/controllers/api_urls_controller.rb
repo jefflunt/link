@@ -25,7 +25,7 @@ class ApiUrlsController < ApplicationController
     @url = Url.find_by(code: params[:code])
 
     if @url
-      render json: { "code" => @url.code, "destination" => @url.full_code_url }, status: 200
+      render json: { "code" => @url.code, "url" => @url.full_code_url, "destination" => @url.dest }, status: 200
     else
       render json: { "error" => "url not found by code" }, status: 404
     end

@@ -24,15 +24,16 @@ POST https://link.jefflunt.com/api/create
             }
 
 
-GET  https://link.jefflunt.com/api/expand/[code]
+GET  https://link.jefflunt.com/api/expand/<code>
+     https://link.jefflunt.com/api/expand/44K38pKG
     params:
         code: the alphanumeric code you got from the api/create endpoint
 
     returns:
         http 200: if the code is found, e.g.:
             {
-                "code": "dS1H5jxa",
-                "destination": "http://localhost:3003/dS1H5jxa"
+                "code": "44K38pKG",
+                "destination": "https://link.jefflunt.com/44K38pKG"
             }
 
         http 404: if the code is not found, e.g.:
