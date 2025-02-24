@@ -5,7 +5,7 @@ Available as a <a href="https://link.jefflunt.com">demo website</a>.
 Also try the API:
 
 ```
-POST https://link.jefflunt.com/api/create
+POST https://link.jefflunt.com/api/create?destination=<full destination URL>
      https://link.jefflunt.com/api/create?destination=https://google.com
      params:
        destination: a full URL destination, e.g. https://google.com
