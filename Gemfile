@@ -8,6 +8,7 @@ gem "pg"
 gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
+gem "rqrcode"
 gem "stimulus-rails"
 gem "jbuilder"
 

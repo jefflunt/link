@@ -1,6 +1,15 @@
 class UrlsController < ApplicationController
   def confirm
     @url = Url.find_by(code: params[:code])
+    @svg_qr = RQRCode::QRCode
+      .new(@url.full_code_url)
+      .as_svg(
+        color: "000",
+        shape_rendering: "crispEdges",
+        module_size: 11,
+        standalone: true,
+        use_path: true
+      )
   end
 
   def new
