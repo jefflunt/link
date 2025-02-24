@@ -33,7 +33,8 @@ GET  https://link.jefflunt.com/api/expand/<code>
         http 200: if the code is found, e.g.:
             {
                 "code": "44K38pKG",
-                "destination": "https://link.jefflunt.com/44K38pKG"
+                "url": "https://link.jefflunt.com/44K38pKG",
+                "destination": "https://google.com"
             }
 
         http 404: if the code is not found, e.g.:
