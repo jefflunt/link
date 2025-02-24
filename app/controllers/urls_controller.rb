@@ -8,8 +8,13 @@ class UrlsController < ApplicationController
   end
 
   def create
-    @url = Url.create!(dest: params[:dest])
-    redirect_to "/confirm/#{@url.code}"
+    @url = Url.new(dest: params[:dest])
+    if @url.save
+      redirect_to "/confirm/#{@url.code}"
+    else
+      @error_msgs = @url.errors.map{|e| "#{e.attribute == :dest ? 'URL' : e.attribute.to_s} #{e.message}" }
+      render :new
+    end
   end
 
   def redirect

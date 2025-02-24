@@ -2,8 +2,16 @@
   <center>
     <h1><%= LinkConfig::BRANDING %></h1>
 
-    <%= form_with do |form| %>
-      <input size=50 name="dest" id="dest" placeholder="destination URL">
+    <%= form_with data: { turbo: false } do |form| %>
+      <% if @error_msgs %>
+        <div id="errors">
+          <% @error_msgs&.each do |e| %>
+            <%= e %>
+            <br />
+          <% end %>
+        </div>
+      <% end %>
+      <input size=50 value="<%= @url.dest %>" name="dest" id="dest" placeholder="destination URL">
       <br/>
       <br/>
       <%= form.submit "Create short link" %>
