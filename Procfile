@@ -1,2 +1,2 @@
 release: rake db:migrate
-web: PROC_TYPE=web bundle exec puma -C config/puma.rb
+web: bundle exec puma -C config/puma.rb
