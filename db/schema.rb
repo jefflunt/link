@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_21_222524) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_24_173805) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "urls", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.text "dest", null: false
     t.string "code", null: false
+    t.index ["code"], name: "index_urls_on_code", unique: true
   end
 end
