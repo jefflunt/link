@@ -1,3 +1,3 @@
-free, open source URL shortener using Rails 8
+open source URL shortener
 
-demo app: https:// link-demo-2eaba4ff84dd.herokuapp.com
+try the [demo app](https:// link-demo-2eaba4ff84dd.herokuapp.com)
