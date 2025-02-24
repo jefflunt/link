@@ -6,6 +6,7 @@ Also try the API:
 
 ```
 POST https://link.jefflunt.com/api/create
+     https://link.jefflunt.com/api/create?destination=https://google.com
      params:
        destination: a full URL destination, e.g. https://google.com
 
