@@ -15,7 +15,7 @@ class Url < ApplicationRecord
   end
 
   def _generate_code
-    characters = ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a
+    characters = ("a".."z").to_a + ("A".."Z").to_a + ("0".."9").to_a
     self.code = (0...8).map { characters.sample }.join
   end
 end
