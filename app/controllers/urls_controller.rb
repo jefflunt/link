@@ -21,7 +21,7 @@ class UrlsController < ApplicationController
     if @url.save
       redirect_to "/confirm/#{@url.code}"
     else
-      @error_msgs = @url.errors.map{|e| "#{e.attribute == :dest ? 'URL' : e.attribute.to_s} #{e.message}" }
+      @error_msgs = @url.errors.map { |e| "#{e.attribute == :dest ? 'URL' : e.attribute.to_s} #{e.message}" }
       render :new
     end
   end
